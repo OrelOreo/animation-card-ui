@@ -1,0 +1,233 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  background: #d8e0e5;
+  height: 100vh;
+}
+
+.card {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card__date {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  padding-top: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 13px;
+  font-weight: bold;
+  background-color: #EF5A31;
+  border-radius: 50%;
+}
+.card__date__day {
+  font-size: 14px;
+  display: block;
+}
+.card__date__month {
+  font-size: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.card__thumb {
+  height: 235px;
+  overflow: hidden;
+  background-color: #000;
+  -webkit-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+.card__thumb img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.card:hover .card__thumb img {
+  opacity: 0.6;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.card:hover .card__thumb {
+  height: 90px;
+}
+
+.card__body {
+  position: relative;
+  padding: 40px 20px;
+  height: 185px;
+  -webkit-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+.card:hover .card__body {
+  height: 330px;
+}
+
+.card__category {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  height: 25px;
+  padding: 0 15px;
+  background: #EF5A31;
+  color: #fff;
+  font-size: 11px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.card__title {
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.card:hover .card__title {
+  -webkit-animation: titleBlur 0.3s;
+  animation: titleBlur 0.3s;
+}
+
+.card__subtitle {
+  color: #EF5A31;
+  font-size: 19px;
+  padding-bottom: 10px;
+}
+.card:hover .card__subtitle {
+  -webkit-animation: subTitle;
+  animation: subTitle;
+}
+
+.card__description {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 65px;
+  color: #666C74;
+  font-size: 14px;
+  line-height: 27px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, -webkit-transform 0.2s;
+  -o-transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: translateY(25px);
+  -ms-transform: translateY(25px);
+  transform: translateY(25px);
+}
+.card:hover .card__description {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.card__footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px;
+  color: #A3A9AB;
+}
+
+@-webkit-keyframes titleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0);
+  }
+}
+@keyframes titleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0);
+  }
+}
+@-webkit-keyframes subTitle {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba(239, 90, 49, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba(239, 90, 49, 0);
+  }
+}
+@keyframes subTitle {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba(239, 90, 49, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba(239, 90, 49, 0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
